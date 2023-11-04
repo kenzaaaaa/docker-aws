@@ -1,0 +1,40 @@
+version: "3"
+services:
+  container-instance1:
+    container_name: instance-1
+    build: .
+    image: my-node-app:0.5.RELEASE
+    restart: unless-stopped
+    ports: 
+     - "81:8181"
+    env_file:
+     - dev.env
+    volumes: 
+    - secret-keys-volume:/app/
+
+  container-instance2:
+    container_name: instance-2
+    build: .
+    image: my-node-app:0.5.RELEASE
+    restart: unless-stopped
+    ports: 
+     - "82:8181"  
+    env_file:
+     - dev.env
+    volumes: 
+    - secret-keys-volume:/app/
+
+  container-instance3:
+    container_name: instance-3
+    build: .
+    image: my-node-app:0.5.RELEASE
+    restart: unless-stopped
+    ports: 
+     - "83:8181"
+    env_file:
+     - dev.env
+    volumes: 
+    - secret-keys-volume:/app/
+
+volumes:
+  secret-keys-volume:
