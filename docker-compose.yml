@@ -6,9 +6,9 @@ services:
     image: my-node-app:0.5.RELEASE
     restart: unless-stopped
     ports: 
-     - "81:8181"
+      - "81:8181"
     env_file:
-     - dev.env
+      - dev.env
     volumes: 
     - secret-keys-volume:/app/
 
@@ -18,9 +18,9 @@ services:
     image: my-node-app:0.5.RELEASE
     restart: unless-stopped
     ports: 
-     - "82:8181"  
+      - "82:8181"  
     env_file:
-     - dev.env
+      - dev.env
     volumes: 
     - secret-keys-volume:/app/
 
@@ -30,9 +30,9 @@ services:
     image: my-node-app:0.5.RELEASE
     restart: unless-stopped
     ports: 
-     - "83:8181"
+      - "83:8181"
     env_file:
-     - dev.env
+      - dev.env
     volumes: 
     - secret-keys-volume:/app/
 
